@@ -1,0 +1,25 @@
+image:
+  repository: ghcr.io/venky-collab/podmortem
+  tag: ""          # defaults to the chart's appVersion
+  pullPolicy: IfNotPresent
+
+# Where the model runs. Point this at an Ollama server reachable from the
+# cluster, e.g. one deployed in-cluster or on the host.
+ollama:
+  url: http://ollama:11434
+  model: qwen2.5:1.5b
+
+# Watch pods and investigate new failures automatically.
+watch:
+  enabled: true
+  namespace: ""    # empty = all namespaces
+
+maxSteps: 4
+dedupe: 10m
+
+service:
+  port: 8080
+
+resources:
+  requests: { cpu: 50m, memory: 64Mi }
+  limits: { memory: 256Mi }
