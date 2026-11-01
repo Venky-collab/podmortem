@@ -1,5 +1,8 @@
 # podmortem
 
+[![ci](https://github.com/Venky-collab/podmortem/actions/workflows/ci.yml/badge.svg)](https://github.com/Venky-collab/podmortem/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **An AI agent that writes the post-mortem for your failing Kubernetes pods.**
 
 When a pod starts crash-looping, gets OOMKilled, or can't pull its image, podmortem
